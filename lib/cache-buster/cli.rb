@@ -12,7 +12,7 @@ module CacheBuster
        say "********************************************************************************************************\n\n", :red
        if yes?('Are you sure you want to proceed?', :yellow)
          say "\nPreparing to clear the cache with brute force. Press ctrl + c to cancel\n", :red
-         (1..5).to_a.reverse.each { |i| say "#{i}.. ", :red ; sleep 1 }
+         (1..5).to_a.reverse_each { |i| say "#{i}.. ", :red ; sleep 1 }
          say "\n\nClearing cache.... ", :red
          Rackspace.new.clear
          say "Done!\n", :green

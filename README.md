@@ -8,10 +8,7 @@
 
 # Cache Buster
 
-♩ ♫ ♩
-When a cache gets stuck, and something something else
-Who you gonna call?
-♩ ♫ ♩
+♩ ♫ ♩ When a cache gets stuck, and something something else / Who you gonna call? ♩ ♫ ♩
 
 ## Installation
 
