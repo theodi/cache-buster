@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cloudflare.com/client/v4/zones/<CLOUDFLARE_ZONE_ID>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Auth-Email:
+      - "<CLOUDFLARE_EMAIL>"
+      X-Auth-Key:
+      - "<CLOUDFLARE_API_KEY>"
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Mon, 07 Mar 2016 14:55:53 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1274'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d2fa3da9751a8aa8beda64f00f1e63fc81457362553; expires=Tue, 07-Mar-17
+        14:55:53 GMT; path=/; domain=.cloudflare.com; HttpOnly
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Cf-Railgun:
+      - 1c4c35efe2 1.02 0.053854 0030 84cd
+      Expires:
+      - Sun, 25 Jan 1981 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cf-Ray:
+      - 27fee416bd23134d-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{"id":"<CLOUDFLARE_ZONE_ID>","name":"theodi.org","status":"active","paused":false,"type":"full","development_mode":-30137707,"name_servers":["coby.ns.cloudflare.com","lila.ns.cloudflare.com"],"original_name_servers":["DNS2.STABLETRANSIT.COM","DNS1.STABLETRANSIT.COM"],"original_registrar":"Mesh
+        Digital Limited (R1728-LROR)","original_dnshost":null,"modified_on":"2016-02-17T13:36:52.704816Z","created_on":"2015-01-05T09:34:19.809709Z","meta":{"step":4,"wildcard_proxiable":false,"custom_certificate_quota":0,"page_rule_quota":"20","phishing_detected":false,"multiple_railguns_allowed":false},"owner":{"type":"user","id":"37b68ede04b6dc3e8ecac1ee285da1b4","email":"<CLOUDFLARE_EMAIL>"},"permissions":["#analytics:read","#billing:edit","#billing:read","#cache_purge:edit","#dns_records:edit","#dns_records:read","#lb:edit","#lb:read","#logs:read","#organization:edit","#organization:read","#ssl:edit","#ssl:read","#waf:edit","#waf:read","#zone:edit","#zone:read","#zone_settings:edit","#zone_settings:read"],"plan":{"id":"a577b510288e82b26486fd1df47000ec","name":"Pro
+        Website","price":20,"currency":"USD","frequency":"monthly","legacy_id":"pro","is_subscribed":true,"can_subscribe":true,"externally_managed":false}},"success":true,"errors":[],"messages":[]}'
+    http_version: 
+  recorded_at: Mon, 07 Mar 2016 14:55:53 GMT
+recorded_with: VCR 3.0.1
