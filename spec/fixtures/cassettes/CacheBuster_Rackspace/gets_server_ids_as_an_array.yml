@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.api.rackspacecloud.com/v2.0/tokens
+    body:
+      encoding: UTF-8
+      string: '{"auth":{"RAX-KSKEY:apiKeyCredentials":{"username":"<RACKSPACE_USERNAME>","apiKey":"<RACKSPACE_API_KEY>"}}}'
+    headers:
+      User-Agent:
+      - fog-core/1.36.0
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Auth-Token:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 07 Mar 2016 15:41:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '5131'
+      Connection:
+      - keep-alive
+      X-Newrelic-App-Data:
+      - PxQGUF9aDwETVlhSBQgFVUYdFGQHBDcQUQxLA1tMXV1dORYzVBJHNQFUZAQUFVFQVThOFlhaUggXER5jLTU3SxJOCEwIFAQcA1wLVwJSH09VGhUFBFULVwMCVFUDUgJVXQEUbg==
+      Vary:
+      - Accept, Accept-Encoding, X-Auth-Token
+      Front-End-Https:
+      - 'on'
+    body:
+      encoding: UTF-8
+      string: '{"access":{"token":{"id":"AACdTycUjFOZb89QA3bpi4eqReXTLPIAc9Cn2Ox7_pdun1aVTEj21FyRpGxQ7Vs5jXa8scKL_G8hD0Bqdo2lDCkQ41WnB7542ut9uUfc2NbcC7MchpDI_5vv","expires":"2016-03-08T15:41:04.898Z","tenant":{"id":"10028727","name":"10028727"},"RAX-AUTH:authenticatedBy":["APIKEY"]},"serviceCatalog":[{"name":"cloudFiles","endpoints":[{"region":"LON","tenantId":"MossoCloudFS_f8d9c13f-3983-451c-b980-d364d284738c","publicURL":"https:\/\/storage101.lon3.clouddrive.com\/v1\/MossoCloudFS_f8d9c13f-3983-451c-b980-d364d284738c","internalURL":"https:\/\/snet-storage101.lon3.clouddrive.com\/v1\/MossoCloudFS_f8d9c13f-3983-451c-b980-d364d284738c"}],"type":"object-store"},{"name":"cloudFilesCDN","endpoints":[{"region":"LON","tenantId":"MossoCloudFS_f8d9c13f-3983-451c-b980-d364d284738c","publicURL":"https:\/\/cdn3.clouddrive.com\/v1\/MossoCloudFS_f8d9c13f-3983-451c-b980-d364d284738c"}],"type":"rax:object-cdn"},{"name":"cloudBigData","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.bigdata.api.rackspacecloud.com\/v1.0\/10028727","versionInfo":"https:\/\/lon.bigdata.api.rackspacecloud.com\/v1.0","versionList":"https:\/\/lon.bigdata.api.rackspacecloud.com\/","versionId":"1"},{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.bigdata.api.rackspacecloud.com\/v2\/10028727","versionInfo":"https:\/\/lon.bigdata.api.rackspacecloud.com\/v2","versionList":"https:\/\/lon.bigdata.api.rackspacecloud.com\/","versionId":"2"}],"type":"rax:bigdata"},{"name":"cloudDatabases","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.databases.api.rackspacecloud.com\/v1.0\/10028727"}],"type":"rax:database"},{"name":"cloudImages","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.images.api.rackspacecloud.com\/v2"}],"type":"image"},{"name":"cloudDNS","endpoints":[{"tenantId":"10028727","publicURL":"https:\/\/lon.dns.api.rackspacecloud.com\/v1.0\/10028727"}],"type":"rax:dns"},{"name":"autoscale","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.autoscale.api.rackspacecloud.com\/v1.0\/10028727"}],"type":"rax:autoscale"},{"name":"cloudOrchestration","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.orchestration.api.rackspacecloud.com\/v1\/10028727"}],"type":"orchestration"},{"name":"cloudNetworks","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.networks.api.rackspacecloud.com\/v2.0"}],"type":"network"},{"name":"cloudServersOpenStack","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.servers.api.rackspacecloud.com\/v2\/10028727","versionInfo":"https:\/\/lon.servers.api.rackspacecloud.com\/v2","versionList":"https:\/\/lon.servers.api.rackspacecloud.com\/","versionId":"2"}],"type":"compute"},{"name":"cloudQueues","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.queues.api.rackspacecloud.com\/v1\/10028727","internalURL":"https:\/\/snet-lon.queues.api.rackspacecloud.com\/v1\/10028727"}],"type":"rax:queues"},{"name":"cloudMonitoring","endpoints":[{"tenantId":"10028727","publicURL":"https:\/\/monitoring.api.rackspacecloud.com\/v1.0\/10028727"}],"type":"rax:monitor"},{"name":"cloudLoadBalancers","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.loadbalancers.api.rackspacecloud.com\/v1.0\/10028727"}],"type":"rax:load-balancer"},{"name":"cloudBackup","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.backup.api.rackspacecloud.com\/v1.0\/10028727"}],"type":"rax:backup"},{"name":"cloudBlockStorage","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.blockstorage.api.rackspacecloud.com\/v1\/10028727"}],"type":"volume"},{"name":"cloudMetricsIngest","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/global.metrics-ingest.api.rackspacecloud.com\/v2.0\/10028727"}],"type":"rax:cloudmetrics"},{"name":"cloudMetrics","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/global.metrics.api.rackspacecloud.com\/v2.0\/10028727"}],"type":"rax:cloudmetrics"},{"name":"rackCDN","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/global.cdn.api.rackspacecloud.com\/v1.0\/10028727","internalURL":"https:\/\/global.cdn.api.rackspacecloud.com\/v1.0\/10028727"}],"type":"rax:cdn"},{"name":"cloudFeeds","endpoints":[{"region":"LON","tenantId":"10028727","publicURL":"https:\/\/lon.feeds.api.rackspacecloud.com\/10028727","internalURL":"https:\/\/atom.prod.lon3.us.ci.rackspace.net\/10028727"}],"type":"rax:feeds"}],"user":{"id":"10017490","roles":[{"id":"10000150","description":"Checkmate
+        Access role","name":"checkmate"},{"tenantId":"MossoCloudFS_f8d9c13f-3983-451c-b980-d364d284738c","id":"5","description":"A
+        Role that allows a user access to keystone Service methods","name":"object-store:default"},{"tenantId":"10028727","id":"6","description":"A
+        Role that allows a user access to keystone Service methods","name":"compute:default"},{"id":"3","description":"User
+        Admin Role.","name":"identity:user-admin"}],"name":"<RACKSPACE_USERNAME>","RAX-AUTH:defaultRegion":"LON"}}}'
+    http_version: 
+  recorded_at: Mon, 07 Mar 2016 15:41:37 GMT
+recorded_with: VCR 3.0.1
