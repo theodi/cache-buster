@@ -1,9 +1,17 @@
+[![Build Status](http://img.shields.io/travis/theodi/cache-buster.svg)](https://travis-ci.org/theodi/cache-buster)
+[![Dependency Status](http://img.shields.io/gemnasium/theodi/cache-buster.svg)](https://gemnasium.com/theodi/cache-buster)
+[![Coverage Status](http://img.shields.io/coveralls/theodi/cache-buster.svg)](https://coveralls.io/r/theodi/cache-buster)
+[![Code Climate](http://img.shields.io/codeclimate/github/theodi/cache-buster.svg)](https://codeclimate.com/github/theodi/cache-buster)
+[![Gem Version](http://img.shields.io/gem/v/cache-buster.svg)](https://rubygems.org/gems/cache-buster)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://theodi.mit-license.org)
+[![Badges](http://img.shields.io/:badges-7/7-ff6799.svg)](https://github.com/badges/badgerbadgerbadger)
+
 # Cache Buster
 
 ♩ ♫ ♩
 When a cache gets stuck, and something something else
 Who you gonna call?
-♩ ♫ ♩ 
+♩ ♫ ♩
 
 ## Installation
 
