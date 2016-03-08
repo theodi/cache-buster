@@ -26,5 +26,11 @@ module CacheBuster
      end
    end
 
+   desc "watch", "watches for a button press"
+   def watch
+     say "Waiting for someone to press a button"
+     Pi.new
+   end
+
  end
 end

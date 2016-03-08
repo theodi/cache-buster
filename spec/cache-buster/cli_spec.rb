@@ -52,5 +52,10 @@ module CacheBuster
       @cli.clear
     end
 
+    it 'starts the pi watching script' do
+      expect(Pi).to receive(:new)
+      @cli.watch
+    end
+
   end
 end
