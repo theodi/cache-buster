@@ -13,3 +13,23 @@ env:
   - GREEN_PIN=24
   - SOFT_BUTTON=16
   - HARD_BUTTON=17
+  - secure: arO3AsHzrdkFab9DvDsPA2k+vXLVqn/8MesrGTAqN8OQTNb/Roo2qQKJ6Z8IV57Ga7k/AOXfJLh/7CHGnFwH4tw+4TTCdwZ7alD0PsrTjIpIXXK7NjFrmt2q9mV6nJE+c7BpCTyFXmsF8RSJ7pOviFBVSn41BRjnoMgxNZtV7W9Zk54yaQsV9jutU84RqogCBUamm+CgC11kqYfjK62xvio+Myusse1xDX49T3hbcznvu6tCfaK1LofMH7/YsQsZvcuyxqfT4cbYfbWTqXaTlDTFmX0ikaHsaQI7JnD61oKL6AAyaAUxHfl1715l/NPYiCfNuk3oiasTvHE/QYbW1qYO9Zl/ee7Cz6McsFimgRKEk33i+ibwgu4T6mvG20zO9PO42OrSGQjOu9yrNzeB3qOcYKkJE1rPSDO34vUuZj2+Hnwzfbw+3NmYdJl5r8H6OWjLIGzJrJ6KwkuxnNTbnL1Nywggg2oj3fxGRH2W1suEEfN56MP45YXladx48/USbtXd+q/WqKq3MFcp6AtfLl5VwPvMuLIwJJ+EEEz1fl3bS1xwdRSfKoROjbUodfIQBruhWOXH+G2DS0DsjyAN+R85CW5kDKPR2niFNNxHkXtExpLoBsJW9/bEz3GvxRVkWPReic0afm6XMY5INFXIg9hpC2IWP4bCa/50yBERk7U=
+  - secure: nsJ/8Pzd5EUwdS1WUE/T+E90bNSgcD1twoNmajBnaJnsNJvR0P1kx0C9MnbxpY61tMFfv9gPho6XIuUPs/Xiiknd7gixTz4L+wy7nuFVx5UXFftBZhcSpqJLSfbYeYKI0I5RgabLr+RjcYFTnWlAVP+J4uywEwAULYVRcIS2aVAWhTrWjfhAthbMpXsnRYSfvpkjwCeXV+CnTmhU3wePkxxRpVT/7NTnS7F78kkgPHuJiEKDopdQjBQII+4NBr3f2siyjjAH8mk29lszv19i4CHNl3g76l0yag6TKxPZ5htdAn/8rGdsccIDd1wI7gbLp7HnCDjPk7Blt4U+DvXcBsGvQuQ7zWlIoxXSRbgHht4QOgZgAtJwjHWrLjUZXyFA1MLeBFNLG3MMGoAkKJUAygpEP4eIRfMlp3+S4E0Fy80TKf5pC/Zz6BgPfzOXaYZGKBhKFdZigxMBbyZ2wDYH8tqM7isuc3nATmAxGkhdK7BhGlO0mYWjacJOWaYGGYfYWdGe3SybNRSl5wqVEEiQ0f4rw6kBihuPz7K9sD2d5g8+2cmh1lIbILuz+u3F361tudlSW6iA+giXrCAglpOStuAhBvQ0zVIv4lDZmGe7TL0HqBaMHkOvCc5yfwL+Tx0h6rasIvP0HrDoxet6OfPTnp1C0PvRu+nhhJxyDEUde3w=
+  - secure: l0nqWHyyKg8impIU1d7KJpkcLcZq+hO15DvcV2NR3FOGVUWezF7g2FTmWSrqecGcaE8R091WvWT3vaSsqrN2sFrzpJoWYmWUc64NCzZw/fPDyCaZ8IbVl+7AFaY1Ffgigam5H90AXRo+QSZOKzg6rkCWhPTuyvGSuK9V0aiZb2YTg8cv2KZg/bbSoCCdJb79E4771TU1mR/80++pOybaBBPnb4WUgoqLucXXaNF93amgBI+C5xhqfd/O6wOKwDgjamYyLiXIbOfJwW85wXZmvT9Ki6eHE/GuJB/FhqyGVbhaZAvsLcld+yt0UHVNxA5ggofBBRBx2ZhhTWdClXAJuUT4G/15uKbSc5vvaZ/yQf0ZalzHZDm5RE5inBXn8TKd8W5zMZf+XqCfPW9bK0cIBVEgTL+XrBOslGJ09XLWUCD2PlzSpeDK8NSuR6n0/KTJdYG7EuELYksRc29re+CbPsNKZWYejs6PW/JRN2Ck8zFeHvHafD92FQHDyFUjnwoZK4y05gYn0sjZgcUavuUKQNJiShi4H+XsNWago3lra8at0Bm6TSxcdoEd9nV7vbxlbydq7Szc/4bb0PM7aOGlyDFTJdoX/v27A2pNyXrm1DOw3wonLh0N8FJBe+WbPSDkOH35jBTf011Nsyc9ouEcH24/ljPMhxW7pkFgUuH704w=
+deploy:
+  provider: rubygems
+  api_key:
+    secure: gzbh51QSje2D5tgSoJN+w1/T1kjEQryZJ6aGOrZ5FgLjroW1gjuwCpWtqym4Te24t1yh4L5PI1Psxb34D0H5rZVL+H8wVzp+QWq4jiLe2G2AJtkAvogbIwRSAwOI1AuUGcee59KnJAhjyJYU/eYXwn5R/sPZOYzMRI9xdoTe5FGHlAycgYhm7PJwMqUTW+bD5NRy1B/+W9mq59rCcXBElD52CB0oQXKzW6N/FIO3Ws4jqsLjwCcQxdCpOl3xzd/hV0tf8g6cb2Yyiqux+3jgbvAuh6h8DTEAm1xbPTpk6ktrRVAUwGIVpI8Kajap9XOZZp8ginR2Q/6/dGeeJeAKhAvnW5QsQsT4iDwwnG+IQMx3g8PkxjwlK50z660rnbE3PIYH+CCQlFHwwGwalbs9ExoSkGjJfaedyWtWJaGE+ZO9iKeOEMjlfZVtWHKwE1+iGzt4pQ4UEi2yap9PAamhrZ9Q9m4J/WN5GiDB9/ue+Uq2lX2mv5uwXn3XpNDBjF6GtQOBbR+3N7lv10QyyoQWu1K2wbyrW/fwCR45x2HciKokdWSmtBFu9Hc+i+AXbC736rsZHA/WtvUinnAEE+6ht2qDflKNA6E+LLwXxQAuYMmRE8gc7sruCeWyCt1qDS0sgUkXODzCW5WM/sWY1VNDY+seJKucf1drP/XpJUBwe4Q=
+  gem: cache-buster
+  on:
+    tags: true
+    repo: theodi/cache-buster
+after_success:
+- export GEM_VERSION=`ruby -e "puts Gem::Specification.load(Dir['*.gemspec'].first).version.to_s"`
+- '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && curl
+  -v -X POST -d ''{"ref":"refs/tags/''$GEM_VERSION''","sha":"''$TRAVIS_COMMIT''"}''  --header
+  "Content-Type:application/json" -u $GITHUB_USER:$GITHUB_PASSWORD "https://api.github.com/repos/$TRAVIS_REPO_SLUG/git/refs"'
+- gem install github_changelog_generator && github_changelog_generator
+- git add CHANGELOG.md
+- git commit -m "Updated Changelog [ci skip]"
+- git push origin master
