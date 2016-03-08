@@ -4,19 +4,13 @@ module CacheBuster
   describe Pi do
 
     before(:each) do
-      expect(PiPiper::Pin).to receive(:new).with(pin: ENV['RED_PIN'], direction: :out) do
-        @red_pin = instance_double(PiPiper::Pin)
-        expect(@red_pin).to receive(:on)
-        expect(@red_pin).to receive(:off)
-        @red_pin
-      end
-
-      expect(PiPiper::Pin).to receive(:new).with(pin: ENV['GREEN_PIN'], direction: :out) do
-        @green_pin = instance_double(PiPiper::Pin)
-        expect(@green_pin).to receive(:on)
-        expect(@green_pin).to receive(:off)
-        @green_pin
-      end
+      expect(PiPiper::Pin).to receive(:new) {
+        pin = instance_double(PiPiper::Pin)
+        expect(pin).to receive(:on)
+        expect(pin).to receive(:off)
+        expect(pin).to receive(:release)
+        pin
+      }.at_least(2).times
 
       allow_any_instance_of(Kernel).to receive(:sleep) { nil }
     end
@@ -28,7 +22,7 @@ module CacheBuster
         double
       }
 
-      expect(PiPiper).to receive(:watch).with(pin: ENV['SOFT_BUTTON']).and_yield
+      expect(PiPiper).to receive(:watch).with(pin: ENV['SOFT_BUTTON'].to_i).and_yield
 
       expect { described_class.new }.to raise_error(SystemExit)
     end
@@ -40,8 +34,8 @@ module CacheBuster
         double
       }
 
-      expect(PiPiper).to receive(:watch).with(pin: ENV['SOFT_BUTTON'])
-      expect(PiPiper).to receive(:watch).with(pin: ENV['HARD_BUTTON']).and_yield
+      expect(PiPiper).to receive(:watch).with(pin: ENV['SOFT_BUTTON'].to_i)
+      expect(PiPiper).to receive(:watch).with(pin: ENV['HARD_BUTTON'].to_i).and_yield
 
       expect { described_class.new }.to raise_error(SystemExit)
     end

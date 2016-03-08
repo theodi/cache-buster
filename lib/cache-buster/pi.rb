@@ -2,32 +2,40 @@ module CacheBuster
   class Pi
 
     def initialize
-      @red = PiPiper::Pin.new(pin: ENV['RED_PIN'], direction: :out)
-      @green = PiPiper::Pin.new(pin: ENV['GREEN_PIN'], direction: :out)
-      watch
+      watch_buttons
     end
 
-    def watch
-      PiPiper.watch pin: ENV['SOFT_BUTTON'] { soft }
-      PiPiper.watch pin: ENV['HARD_BUTTON'] { hard }
+    def watch_buttons
+      PiPiper.watch pin: ENV['SOFT_BUTTON'].to_i do
+        CacheBuster::Pi.soft
+      end
+
+      PiPiper.watch pin: ENV['HARD_BUTTON'].to_i do
+        CacheBuster::Pi.hard
+      end
+
       PiPiper.wait
     end
 
-    def hard
+    def self.hard
       run Proc.new { Rackspace.new.clear }
     end
 
-    def soft
+    def self.soft
       run Proc.new { Cloudflare.new.clear }
     end
 
-    def run(proc)
-      @red.on
+    def self.run(proc)
+      red = PiPiper::Pin.new(pin: ENV['RED_PIN'].to_i, direction: :out)
+      green = PiPiper::Pin.new(pin: ENV['GREEN_PIN'].to_i, direction: :out)
+      red.on
       proc.call
-      @red.off
-      @green.on
+      red.off
+      green.on
       sleep 5
-      @green.off
+      green.off
+      red.release
+      green.release
       exit if ENV['TEST']
     end
 
