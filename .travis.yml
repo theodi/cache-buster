@@ -30,7 +30,7 @@ after_success:
 - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && curl
   -v -X POST -d ''{"ref":"refs/tags/''$GEM_VERSION''","sha":"''$TRAVIS_COMMIT''"}''  --header
   "Content-Type:application/json" -u $GITHUB_USER:$GITHUB_PASSWORD "https://api.github.com/repos/$TRAVIS_REPO_SLUG/git/refs"'
-- '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]
+- '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
    gem install github_changelog_generator && github_changelog_generator && git config user.name "Travis CI" &&
    git config user.email "travis@theodi.org" && git checkout master && git add CHANGELOG.md &&
    git commit -m "Updated Changelog [ci skip]" && git push "https://${CHANGELOG_GITHUB_TOKEN}@github.com/theodi/cache-buster" master'
