@@ -33,7 +33,7 @@ after_success:
 - gem install github_changelog_generator && github_changelog_generator
 - git config user.name "Travis CI"
 - git config user.email "travis@theodi.org"
+- git checkout master
 - git add CHANGELOG.md
-- cat CHANGELOG.md
 - git commit -m "Updated Changelog [ci skip]"
 - git push "https://${CHANGELOG_GITHUB_TOKEN}@github.com/theodi/cache-buster" master
