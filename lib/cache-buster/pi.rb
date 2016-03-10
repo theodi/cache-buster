@@ -7,7 +7,6 @@ module CacheBuster
 
     def watch_buttons
       PiPiper.after pin: ENV['SOFT_BUTTON'].to_i, direction: :in, pull: :down, goes: :high do
-      PiPiper.watch pin: ENV['SOFT_BUTTON'].to_i do
         CacheBuster::Pi.soft
       end
 
