@@ -27,7 +27,17 @@ module CacheBuster
    end
 
    desc "watch", "watches for a button press"
+   method_option :daemon,
+              type: :boolean,
+              default: false,
+              desc: 'Creates a file `.pid` with the current process ID'
    def watch
+     if options['daemon']
+       file = File.new(File.join('/', 'tmp', 'cache-buster.pid'), 'w+')
+       file.write(Process.pid)
+       file.rewind
+       file.close
+     end
      say "Waiting for someone to press a button"
      Pi.new
    end
