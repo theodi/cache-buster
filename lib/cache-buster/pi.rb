@@ -19,10 +19,12 @@ module CacheBuster
 
     def self.hard
       run Proc.new { Rackspace.new.clear }
+      sleep 30
     end
 
     def self.soft
       run Proc.new { Cloudflare.new.clear }
+      sleep 30
     end
 
     def self.run(proc)

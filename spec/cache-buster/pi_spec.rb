@@ -22,7 +22,7 @@ module CacheBuster
         double
       }
 
-      expect(PiPiper).to receive(:watch).with(pin: ENV['SOFT_BUTTON'].to_i).and_yield
+      expect(PiPiper).to receive(:watch).with(pin: ENV['SOFT_BUTTON'].to_i, direction: :in, pull: :down, trigger: :rising).and_yield
 
       expect { described_class.new }.to raise_error(SystemExit)
     end
@@ -34,8 +34,8 @@ module CacheBuster
         double
       }
 
-      expect(PiPiper).to receive(:watch).with(pin: ENV['SOFT_BUTTON'].to_i)
-      expect(PiPiper).to receive(:watch).with(pin: ENV['HARD_BUTTON'].to_i).and_yield
+      expect(PiPiper).to receive(:watch).with(pin: ENV['SOFT_BUTTON'].to_i, direction: :in, pull: :down, trigger: :rising)
+      expect(PiPiper).to receive(:watch).with(pin: ENV['HARD_BUTTON'].to_i, direction: :in, pull: :down, trigger: :rising).and_yield
 
       expect { described_class.new }.to raise_error(SystemExit)
     end
